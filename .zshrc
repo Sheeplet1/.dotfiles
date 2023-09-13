@@ -120,6 +120,7 @@ if [[ `uname` == "Darwin" ]]; then
 elif [[ `uname` == "Linux" ]]; then
   echo "Linux configuration loaded"
   alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+  alias onedrivep="cd '/mnt/c/Users/Anthony/OneDrive/Documents/"
   alias onedrive="cd '/mnt/c/Users/Anthony/OneDrive - UNSW/2023/T3/'"
   alias personal="cd '/home/anthony/code/personal/'"
   alias uni="cd '/home/anthony/code/uni/'"
