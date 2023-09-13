@@ -111,22 +111,18 @@ source $ZSH/oh-my-zsh.sh
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 if [[ `uname` == "Darwin" ]]; then
-  echo "MacOS configuration located"
   alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
   alias onedrive_uni="cd '/Users/huananthonydo/OneDrive - UNSW/2023/T3/'"
   alias personal="cd '/Users/huananthonydo/Documents/code/'"
   alias uni="cd '/Users/huananthonydo/Documents/uni/'"
   alias home="cd ~"
 elif [[ `uname` == "Linux" ]]; then
-  echo "Linux configuration loaded"
   alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
   alias onedrivep="cd '/mnt/c/Users/Anthony/OneDrive/Documents/"
   alias onedrive="cd '/mnt/c/Users/Anthony/OneDrive - UNSW/2023/T3/'"
   alias personal="cd '/home/anthony/code/personal/'"
   alias uni="cd '/home/anthony/code/uni/'"
   alias home="cd ~"
-else
-  echo "Not MacOS or Linux!"
 fi
 
 if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
