@@ -110,19 +110,18 @@ source $ZSH/oh-my-zsh.sh
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+alias home="cd ~"
+alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias nvimconfig="cd '$HOME/.config/nvim/lua/custom/'"
 if [[ `uname` == "Darwin" ]]; then
-  alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
   alias onedrive_uni="cd '/Users/huananthonydo/OneDrive - UNSW/2023/T3/'"
   alias personal="cd '/Users/huananthonydo/Documents/code/'"
   alias uni="cd '/Users/huananthonydo/Documents/uni/'"
-  alias home="cd ~"
-elif [[ `uname` == "Linux" ]]; then
-  alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-  alias onedrivep="cd '/mnt/c/Users/Anthony/OneDrive/Documents/"
+  elif [[ `uname` == "Linux" ]]; then
+  alias onedrivep="cd '/mnt/c/Users/Anthony/OneDrive/Documents/'"
   alias onedrive="cd '/mnt/c/Users/Anthony/OneDrive - UNSW/2023/T3/'"
   alias personal="cd '/home/anthony/code/personal/'"
   alias uni="cd '/home/anthony/code/uni/'"
-  alias home="cd ~"
 fi
 
 if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
